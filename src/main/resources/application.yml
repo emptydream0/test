@@ -1,12 +1,14 @@
 
 spring:
+  main:
+    allow-bean-definition-overriding: true
   servlet:
     multipart:
       max-file-size: 50MB
       max-request-size: 500MB
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/minitor?serverTimezone=GMT%2B8
+    url: jdbc:mysql://localhost:3306/absence?serverTimezone=GMT%2B8
     username: Nameless
     password: 123456
 #  web:

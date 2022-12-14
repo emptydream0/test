@@ -24,7 +24,7 @@ import java.net.URLEncoder;
 @RequestMapping("/file")
 public class FileController {
 
-    private String fileUploadPath="E:\\Learning\\手机应用开发\\suxingShop\\src\\main\\files\\";//上传文件路径
+    private String fileUploadPath="E:\\Learning\\学生外出请假平台\\学生外出请假平台\\src\\main\\files\\";//上传文件路径
 
     @Resource
     private MyFileMapper myFileMapper;
@@ -45,19 +45,10 @@ public class FileController {
         String fileUUid = uuid + StrUtil.DOT + type;
         File file1 = new File(fileUploadPath+fileUUid);
         String url;
-        url = " http://sgscuf.natappfree.cc/file/";
+        url = " https://bouncypussies.mynatapp.cc/glmg/";
 //        url = "http://localhost:8080/file/";
-
-
-
-
-
         //存储到数据库
         file.transferTo(file1);
-
-
-
-
         MyFile saveFile = new MyFile();
         saveFile.setName(originalFilename);
         saveFile.setSize(size/1024);
@@ -79,12 +70,7 @@ public class FileController {
         os.write(FileUtil.readBytes(uploadFile));
         os.flush();
         os.close();
-
-
     }
-
-
-
     public String uploadTest( MultipartFile file) throws IOException {
         String originalFilename = file.getOriginalFilename();
         String type = FileUtil.extName(originalFilename);
@@ -102,17 +88,8 @@ public class FileController {
         String url;
 //        url = "http://vupbgn.natappfree.cc/file/";
         url = "http://localhost:8080/file/";
-
-
-
-
-
         //存储到数据库
         file.transferTo(file1);
-
-
-
-
         MyFile saveFile = new MyFile();
         saveFile.setName(originalFilename);
         saveFile.setSize(size/1024);
@@ -122,11 +99,4 @@ public class FileController {
 
         return fileUUid;
     }
-
-
-
-
-
-
-
 }

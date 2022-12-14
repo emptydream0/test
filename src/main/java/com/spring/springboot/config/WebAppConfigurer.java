@@ -17,7 +17,7 @@ public class WebAppConfigurer  implements WebMvcConfigurer {
         //文件磁盘图片url 映射 ，一下位windows下的
         //配置server虚拟路径，handler为前台访问的目录，locations为files相对应的本地路径
         registry.addResourceHandler("/glmg/**")
-                .addResourceLocations("file:E:\\Learning\\手机应用开发\\suxingShop\\src\\main\\files\\");  // 轮转帖子图片映射
+                .addResourceLocations("file:E:\\Learning\\学生外出请假平台\\学生外出请假平台\\src\\main\\files\\");  // 轮转帖子图片映射
     }
 
 }
